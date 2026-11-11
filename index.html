@@ -158,6 +158,11 @@ section {
 .card h3 { margin-top: 0; }
 .card p { color: var(--muted); }
 
+.card h4 {
+  font-size: 14px;
+  margin: 20px 0 8px;
+}
+
 .tag {
   display: inline-block;
   color: var(--accent);
@@ -185,6 +190,29 @@ section {
 .coursework-icon {
   font-size: 32px;
   margin-bottom: 12px;
+}
+
+.education-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.education-card .buttons {
+  margin-top: auto;
+}
+
+.status {
+  display: inline-block;
+  color: #75d6a0;
+  background: rgba(54,160,105,.13);
+  border: 1px solid rgba(54,160,105,.3);
+  padding: 5px 11px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  margin-bottom: 14px;
 }
 
 .contact { text-align: center; }
@@ -275,7 +303,8 @@ footer {
         Explore My Coursework →
       </a>
 
-      <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com"
+      <a class="btn"
+         href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com"
          target="_blank" rel="noopener">
         Contact Me
       </a>
@@ -442,33 +471,126 @@ footer {
     </div>
   </section>
 
-  <!-- EDUCATION -->
+  <!-- EDUCATION & PROFESSIONAL TRAINING -->
   <section id="education">
-    <div class="eyebrow">05 / ACADEMIC BACKGROUND</div>
+
+    <div class="eyebrow">05 / ACADEMIC & PROFESSIONAL BACKGROUND</div>
+
     <h2 class="section-title">
-      <span>Education</span>
+      Education & <span>Professional Training</span>
     </h2>
 
-    <div class="card">
-      <h3>Lev Academic Center</h3>
-      <p>
-        B.Sc. in Electrical and Electronics Engineering
-      </p>
-      <span class="tag">Electrical Engineering</span>
-      <span class="tag">Electronics</span>
-      <span class="tag">Digital Systems</span>
+    <div class="grid">
 
-      <div class="buttons">
-        <a class="btn" href="coursework.html">
-          View Academic Coursework →
-        </a>
+      <!-- ACADEMIC DEGREE -->
+      <div class="card education-card">
+
+        <span class="tag">Academic Degree</span>
+
+        <h3>Lev Academic Center</h3>
+
+        <p>
+          B.Sc. in Electrical and Electronics Engineering.
+
+          Academic studies covering electronic systems,
+          digital design, signal processing, communication
+          systems and engineering mathematics.
+        </p>
+
+        <span class="tag">Electrical Engineering</span>
+        <span class="tag">Electronics</span>
+        <span class="tag">Digital Systems</span>
+
+        <div class="buttons">
+          <a class="btn" href="coursework.html">
+            View Academic Coursework →
+          </a>
+        </div>
+
       </div>
+
+      <!-- PROFESSIONAL TRAINING -->
+      <div class="card education-card">
+
+        <span class="tag">Online Professional Training</span>
+
+        <div>
+          <span class="status">IN PROGRESS</span>
+        </div>
+
+        <h3>Networking & Cyber Security</h3>
+
+        <p>
+          Comprehensive online technical training covering
+          computer networking, Linux system administration,
+          cybersecurity fundamentals, cloud computing,
+          Python programming and IT automation.
+        </p>
+
+        <h4>Networking & Infrastructure</h4>
+
+        <p>
+          Network architecture, OSI model, TCP/IP,
+          IP addressing, subnetting, VLANs, switching,
+          routing, OSPF and network protocols.
+        </p>
+
+        <h4>Linux & System Administration</h4>
+
+        <p>
+          Linux operating systems, command-line operations,
+          file systems, user and permission management,
+          shell scripting and system administration.
+        </p>
+
+        <h4>Cybersecurity</h4>
+
+        <p>
+          Security fundamentals, network traffic analysis,
+          Wireshark, network scanning, penetration testing
+          concepts and firewall configuration.
+        </p>
+
+        <h4>Cloud Computing</h4>
+
+        <p>
+          Cloud architecture, virtualization, data centers,
+          AWS, Microsoft Azure, Google Cloud Platform
+          and cloud infrastructure concepts.
+        </p>
+
+        <h4>Programming & Automation</h4>
+
+        <p>
+          Python programming, data structures, functions,
+          file handling, GitHub, scripting and automation
+          tools including Ansible.
+        </p>
+
+        <div class="tags">
+          <span class="tag">CCNA Topics</span>
+          <span class="tag">TCP/IP</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Cybersecurity</span>
+          <span class="tag">Wireshark</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Azure</span>
+          <span class="tag">GCP</span>
+          <span class="tag">Python</span>
+          <span class="tag">Ansible</span>
+        </div>
+
+      </div>
+
     </div>
+
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
+
     <div class="eyebrow">06 / GET IN TOUCH</div>
+
     <h2 class="section-title">
       Let's <span>Connect</span>
     </h2>
@@ -479,6 +601,7 @@ footer {
     </p>
 
     <div class="contact-details">
+
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com"
          target="_blank" rel="noopener">
         ✉ amitaibentov20@gmail.com
@@ -488,9 +611,11 @@ footer {
          target="_blank" rel="noopener">
         ↗ LinkedIn Profile
       </a>
+
     </div>
 
     <div class="buttons" style="justify-content:center">
+
       <a class="btn primary"
          href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com"
          target="_blank" rel="noopener">
@@ -502,6 +627,7 @@ footer {
          target="_blank" rel="noopener">
         Visit LinkedIn
       </a>
+
     </div>
 
   </section>
