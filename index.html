@@ -18,7 +18,6 @@
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -63,6 +62,7 @@ nav a {
   text-decoration: none;
   margin-left: 20px;
   font-size: 14px;
+  transition: .2s;
 }
 
 nav a:hover { color: var(--accent); }
@@ -156,7 +156,6 @@ section {
 }
 
 .card h3 { margin-top: 0; }
-
 .card p { color: var(--muted); }
 
 .tag {
@@ -171,10 +170,24 @@ section {
 
 .skill-group { margin-bottom: 5px; }
 
-.contact {
-  text-align: center;
+.coursework-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 230px;
 }
 
+.coursework-card .btn {
+  align-self: flex-start;
+  margin-top: 18px;
+}
+
+.coursework-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.contact { text-align: center; }
 .contact p { color: var(--muted); }
 
 .contact-details {
@@ -207,7 +220,7 @@ footer {
   }
 
   nav a {
-    margin: 0 12px 0 0;
+    margin: 0 10px 0 0;
   }
 
   .hero { padding: 75px 0; }
@@ -225,6 +238,7 @@ footer {
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="coursework.html">Coursework</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
@@ -257,7 +271,12 @@ footer {
         Explore My Projects
       </a>
 
-      <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com" target="_blank" rel="noopener">
+      <a class="btn" href="coursework.html">
+        Explore My Coursework →
+      </a>
+
+      <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com"
+         target="_blank" rel="noopener">
         Contact Me
       </a>
     </div>
@@ -329,9 +348,60 @@ footer {
     </div>
   </section>
 
+  <!-- COURSEWORK -->
+  <section id="coursework">
+    <div class="eyebrow">03 / ACADEMIC KNOWLEDGE</div>
+
+    <h2 class="section-title">
+      Technical <span>Coursework</span>
+    </h2>
+
+    <div class="grid">
+
+      <div class="card coursework-card">
+        <div>
+          <div class="coursework-icon">📚</div>
+          <h3>My Engineering Coursework</h3>
+          <p>
+            Explore the engineering courses I have completed
+            throughout my Electrical and Electronics Engineering
+            studies, organized by technical knowledge areas.
+          </p>
+          <span class="tag">Digital Design</span>
+          <span class="tag">Electronics</span>
+          <span class="tag">Communications</span>
+          <span class="tag">Signal Processing</span>
+        </div>
+
+        <a class="btn primary" href="coursework.html">
+          Explore All Courses →
+        </a>
+      </div>
+
+      <div class="card coursework-card">
+        <div>
+          <div class="coursework-icon">⚙️</div>
+          <h3>From Theory to Practice</h3>
+          <p>
+            Each course includes a technical overview,
+            key concepts and examples of how academic
+            knowledge connects to real-world engineering applications.
+          </p>
+          <span class="tag">Practical Applications</span>
+          <span class="tag">Engineering Knowledge</span>
+        </div>
+
+        <a class="btn" href="coursework.html">
+          Discover My Knowledge →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
   <!-- SKILLS -->
   <section id="skills">
-    <div class="eyebrow">03 / TECHNOLOGY</div>
+    <div class="eyebrow">04 / TECHNOLOGY</div>
     <h2 class="section-title">
       Technical <span>Skills</span>
     </h2>
@@ -374,7 +444,7 @@ footer {
 
   <!-- EDUCATION -->
   <section id="education">
-    <div class="eyebrow">04 / ACADEMIC BACKGROUND</div>
+    <div class="eyebrow">05 / ACADEMIC BACKGROUND</div>
     <h2 class="section-title">
       <span>Education</span>
     </h2>
@@ -387,12 +457,18 @@ footer {
       <span class="tag">Electrical Engineering</span>
       <span class="tag">Electronics</span>
       <span class="tag">Digital Systems</span>
+
+      <div class="buttons">
+        <a class="btn" href="coursework.html">
+          View Academic Coursework →
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
-    <div class="eyebrow">05 / GET IN TOUCH</div>
+    <div class="eyebrow">06 / GET IN TOUCH</div>
     <h2 class="section-title">
       Let's <span>Connect</span>
     </h2>
@@ -403,11 +479,13 @@ footer {
     </p>
 
     <div class="contact-details">
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com" target="_blank" rel="noopener">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com"
+         target="_blank" rel="noopener">
         ✉ amitaibentov20@gmail.com
       </a>
 
-      <a href="https://www.linkedin.com/in/amitaibentov/" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/amitaibentov/"
+         target="_blank" rel="noopener">
         ↗ LinkedIn Profile
       </a>
     </div>
