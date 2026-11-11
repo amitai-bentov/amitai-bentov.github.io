@@ -4,8 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Amitai Bentov - Electrical and Electronics Engineering Portfolio">
 <title>Amitai Bentov | Engineering Portfolio</title>
-<meta name="description" content="Electrical and Electronics Engineering Portfolio">
+
 <style>
 :root {
   --bg: #0b1120;
@@ -15,8 +16,11 @@
   --accent: #54b8e8;
   --line: #29374d;
 }
+
 * { box-sizing: border-box; }
+
 html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -24,84 +28,169 @@ body {
   color: var(--text);
   line-height: 1.7;
 }
-.container { width: min(1080px, 90%); margin: auto; }
+
+.container {
+  width: min(1080px, 90%);
+  margin: auto;
+}
+
 header {
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
-  background: rgba(11,17,32,.94);
+  background: rgba(11,17,32,.96);
   backdrop-filter: blur(12px);
   z-index: 10;
 }
+
 nav {
-  min-height: 70px;
+  min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
-.logo { font-size: 20px; font-weight: bold; }
+
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+}
+
 .logo span { color: var(--accent); }
+
 nav a {
   color: var(--muted);
   text-decoration: none;
   margin-left: 20px;
   font-size: 14px;
 }
+
 nav a:hover { color: var(--accent); }
-.hero { padding: 105px 0 90px; }
+
+.hero { padding: 110px 0 100px; }
+
 .eyebrow {
   color: var(--accent);
   letter-spacing: 3px;
   font-size: 12px;
   font-weight: bold;
 }
-h1 { font-size: clamp(42px, 7vw, 72px); line-height: 1.1; margin: 18px 0; }
+
+h1 {
+  font-size: clamp(42px, 7vw, 74px);
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
 h1 span { color: var(--accent); }
-.hero p { color: var(--muted); font-size: 19px; max-width: 650px; }
-.buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+
+.hero p {
+  color: var(--muted);
+  font-size: 19px;
+  max-width: 680px;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
 .btn {
   display: inline-block;
-  padding: 12px 22px;
+  padding: 12px 23px;
   border-radius: 7px;
   text-decoration: none;
   font-weight: bold;
   border: 1px solid var(--accent);
   color: var(--accent);
+  transition: .2s;
 }
-.btn.primary { background: var(--accent); color: #07111e; }
-section { padding: 65px 0; border-top: 1px solid var(--line); }
-.section-title { font-size: 30px; margin: 0 0 30px; }
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: .85;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #07111e;
+}
+
+section {
+  padding: 70px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-title {
+  font-size: 32px;
+  margin: 0 0 30px;
+}
+
 .section-title span { color: var(--accent); }
-.about { color: var(--muted); max-width: 800px; font-size: 17px; }
+
+.about {
+  color: var(--muted);
+  max-width: 820px;
+  font-size: 17px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
+  gap: 20px;
 }
+
 .card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 24px;
+  padding: 25px;
   transition: .2s;
 }
-.card:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
 .card h3 { margin-top: 0; }
+
 .card p { color: var(--muted); }
+
 .tag {
   display: inline-block;
   color: var(--accent);
   background: #193047;
-  padding: 4px 9px;
+  padding: 4px 10px;
   border-radius: 5px;
   font-size: 12px;
   margin: 4px 3px 0 0;
 }
-.skill-group { margin-bottom: 25px; }
-.skill-group h3 { font-size: 17px; }
-.contact { text-align: center; }
+
+.skill-group { margin-bottom: 5px; }
+
+.contact {
+  text-align: center;
+}
+
 .contact p { color: var(--muted); }
+
+.contact-details {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.contact-details a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 16px;
+}
+
 footer {
   text-align: center;
   padding: 28px;
@@ -109,13 +198,23 @@ footer {
   border-top: 1px solid var(--line);
   font-size: 13px;
 }
+
 @media(max-width:650px) {
-  nav { align-items: flex-start; padding: 16px 0; flex-direction: column; }
-  nav a { margin: 0 12px 0 0; }
-  .hero { padding: 70px 0; }
+  nav {
+    align-items: flex-start;
+    padding: 16px 0;
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 0 12px 0 0;
+  }
+
+  .hero { padding: 75px 0; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -126,6 +225,7 @@ footer {
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -133,112 +233,202 @@ footer {
 </header>
 
 <main>
-  <div class="container">
-    <div class="hero">
-      <div class="eyebrow">ELECTRICAL & ELECTRONICS ENGINEERING</div>
-      <h1>Hi, I'm <span>Amitai Bentov.</span></h1>
-      <p>
-        Engineering student passionate about hardware design,
-        digital systems, FPGA and signal processing.
-        Building practical solutions through engineering and technology.
-      </p>
-      <div class="buttons">
-        <a class="btn primary" href="#projects">Explore My Projects</a>
-        <a class="btn" href="#contact">Get In Touch</a>
-      </div>
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">
+      ELECTRICAL & ELECTRONICS ENGINEERING
     </div>
 
-    <section id="about">
-      <div class="eyebrow">01 / INTRODUCTION</div>
-      <h2 class="section-title">About <span>Me</span></h2>
-      <p class="about">
-        I am an Electrical and Electronics Engineering student at
-        Lev Academic Center, interested in hardware engineering,
-        digital design and electronic systems.
-        I enjoy combining theoretical knowledge with hands-on
-        engineering projects and practical problem solving.
-      </p>
-    </section>
+    <h1>
+      Hi, I'm <span>Amitai Bentov.</span>
+    </h1>
 
-    <section id="projects">
-      <div class="eyebrow">02 / SELECTED WORK</div>
-      <h2 class="section-title">Engineering <span>Projects</span></h2>
-      <div class="grid">
+    <p>
+      Electrical and Electronics Engineering student
+      passionate about hardware design, digital systems,
+      FPGA, VLSI and signal processing.
+      Interested in developing innovative engineering solutions.
+    </p>
 
-        <div class="card">
-          <h3>Electronic Measurements</h3>
-          <p>
-            MATLAB project focused on digital image sampling,
-            grayscale conversion and image compression using
-            different sampling ratios.
-          </p>
-          <span class="tag">MATLAB</span>
-          <span class="tag">Signal Processing</span>
-          <span class="tag">Image Processing</span>
-        </div>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">
+        Explore My Projects
+      </a>
 
-        <div class="card">
-          <h3>Maze Search Algorithms</h3>
-          <p>
-            Implementation and comparison of search algorithms
-            for maze solving, including BFS, DFS and A*.
-          </p>
-          <span class="tag">Python</span>
-          <span class="tag">BFS</span>
-          <span class="tag">DFS</span>
-          <span class="tag">A*</span>
-        </div>
-
-        <div class="card">
-          <h3>Digital Design & VHDL</h3>
-          <p>
-            Academic work involving digital logic design,
-            hardware description languages and simulation
-            of digital systems.
-          </p>
-          <span class="tag">VHDL</span>
-          <span class="tag">RTL</span>
-          <span class="tag">ModelSim</span>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="eyebrow">03 / TECHNOLOGY</div>
-      <h2 class="section-title">Technical <span>Skills</span></h2>
-      <div class="grid">
-        <div class="card skill-group">
-          <h3>Hardware & Digital Design</h3>
-          <span class="tag">VHDL</span>
-          <span class="tag">RTL</span>
-          <span class="tag">FPGA</span>
-          <span class="tag">Digital Logic</span>
-        </div>
-        <div class="card skill-group">
-          <h3>Engineering Tools</h3>
-          <span class="tag">MATLAB</span>
-          <span class="tag">LTspice</span>
-          <span class="tag">ModelSim</span>
-        </div>
-        <div class="card skill-group">
-          <h3>Programming</h3>
-          <span class="tag">Python</span>
-          <span class="tag">C / Assembly</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="eyebrow">04 / CONTACT</div>
-      <h2 class="section-title">Let's <span>Connect</span></h2>
-      <p>Interested in engineering opportunities and collaboration.</p>
-      <div class="buttons" style="justify-content:center">
-        <a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
-        <a class="btn" href="YOUR_LINKEDIN_URL" target="_blank">LinkedIn</a>
-      </div>
-    </section>
+      <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com" target="_blank" rel="noopener">
+        Contact Me
+      </a>
+    </div>
   </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="eyebrow">01 / INTRODUCTION</div>
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <p class="about">
+      I am an Electrical and Electronics Engineering student
+      at Lev Academic Center.
+
+      My main interests include hardware engineering,
+      digital design, electronic systems and signal processing.
+
+      I enjoy combining theoretical knowledge with practical
+      engineering projects, problem solving and technical development.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="eyebrow">02 / SELECTED WORK</div>
+    <h2 class="section-title">
+      Engineering <span>Projects</span>
+    </h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Electronic Measurements</h3>
+        <p>
+          MATLAB project involving digital image sampling,
+          grayscale conversion and image compression
+          using different sampling ratios.
+        </p>
+        <span class="tag">MATLAB</span>
+        <span class="tag">Signal Processing</span>
+        <span class="tag">Image Processing</span>
+      </div>
+
+      <div class="card">
+        <h3>Maze Search Algorithms</h3>
+        <p>
+          Implementation and comparison of search algorithms
+          for maze solving, including Breadth-First Search,
+          Depth-First Search and A*.
+        </p>
+        <span class="tag">Python</span>
+        <span class="tag">BFS</span>
+        <span class="tag">DFS</span>
+        <span class="tag">A*</span>
+      </div>
+
+      <div class="card">
+        <h3>Digital Design & VHDL</h3>
+        <p>
+          Academic work involving digital logic design,
+          hardware description languages and simulation
+          of digital systems.
+        </p>
+        <span class="tag">VHDL</span>
+        <span class="tag">RTL</span>
+        <span class="tag">ModelSim</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="eyebrow">03 / TECHNOLOGY</div>
+    <h2 class="section-title">
+      Technical <span>Skills</span>
+    </h2>
+
+    <div class="grid">
+
+      <div class="card skill-group">
+        <h3>Hardware & Digital Design</h3>
+        <span class="tag">VHDL</span>
+        <span class="tag">RTL</span>
+        <span class="tag">FPGA</span>
+        <span class="tag">Digital Logic</span>
+        <span class="tag">Microcontrollers</span>
+      </div>
+
+      <div class="card skill-group">
+        <h3>Engineering Tools</h3>
+        <span class="tag">MATLAB</span>
+        <span class="tag">LTspice</span>
+        <span class="tag">ModelSim</span>
+      </div>
+
+      <div class="card skill-group">
+        <h3>Programming</h3>
+        <span class="tag">Python</span>
+        <span class="tag">Assembly</span>
+        <span class="tag">C</span>
+      </div>
+
+      <div class="card skill-group">
+        <h3>Engineering Topics</h3>
+        <span class="tag">Signal Processing</span>
+        <span class="tag">Digital Systems</span>
+        <span class="tag">Communication Systems</span>
+        <span class="tag">Electronics</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="eyebrow">04 / ACADEMIC BACKGROUND</div>
+    <h2 class="section-title">
+      <span>Education</span>
+    </h2>
+
+    <div class="card">
+      <h3>Lev Academic Center</h3>
+      <p>
+        B.Sc. in Electrical and Electronics Engineering
+      </p>
+      <span class="tag">Electrical Engineering</span>
+      <span class="tag">Electronics</span>
+      <span class="tag">Digital Systems</span>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="eyebrow">05 / GET IN TOUCH</div>
+    <h2 class="section-title">
+      Let's <span>Connect</span>
+    </h2>
+
+    <p>
+      Interested in engineering opportunities,
+      hardware development and professional collaboration.
+    </p>
+
+    <div class="contact-details">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com" target="_blank" rel="noopener">
+        ✉ amitaibentov20@gmail.com
+      </a>
+
+      <a href="https://www.linkedin.com/in/amitaibentov/" target="_blank" rel="noopener">
+        ↗ LinkedIn Profile
+      </a>
+    </div>
+
+    <div class="buttons" style="justify-content:center">
+      <a class="btn primary"
+         href="https://mail.google.com/mail/?view=cm&fs=1&to=amitaibentov20%40gmail.com"
+         target="_blank" rel="noopener">
+        Send Me an Email
+      </a>
+
+      <a class="btn"
+         href="https://www.linkedin.com/in/amitaibentov/"
+         target="_blank" rel="noopener">
+        Visit LinkedIn
+      </a>
+    </div>
+
+  </section>
+
+</div>
 </main>
 
 <footer>
