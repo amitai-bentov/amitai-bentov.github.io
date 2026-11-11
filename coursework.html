@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Technical Coursework - Amitai Bentov, Electrical and Electronics Engineering">
+<title>Technical Coursework | Amitai Bentov</title>
+
+<style>
+:root {
+  --bg:#0b1120;
+  --card:#141e30;
+  --text:#edf3fc;
+  --muted:#a1b0c5;
+  --accent:#54b8e8;
+  --line:#29374d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+.container{width:min(1100px,92%);margin:auto}
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(11,17,32,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px);
+}
+nav{
+  min-height:70px;display:flex;justify-content:space-between;
+  align-items:center;gap:20px;
+}
+.logo{font-size:21px;font-weight:bold}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}
+nav a:hover,.back:hover{color:var(--accent)}
+.hero{padding:75px 0 45px}
+.eyebrow{
+  color:var(--accent);font-size:12px;
+  font-weight:bold;letter-spacing:3px
+}
+h1{font-size:clamp(36px,6vw,58px);line-height:1.15;margin:16px 0}
+h1 span,.accent{color:var(--accent)}
+.subtitle{color:var(--muted);max-width:750px;font-size:17px}
+.back{color:var(--accent);text-decoration:none;font-size:14px}
+.stats{
+  display:flex;gap:14px;flex-wrap:wrap;margin-top:30px
+}
+.stat{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:9px;padding:12px 18px;min-width:140px
+}
+.stat strong{font-size:23px;display:block}
+.stat small{color:var(--muted)}
+.toolbar{
+  display:grid;grid-template-columns:1fr 230px;
+  gap:12px;margin:20px 0 30px
+}
+input,select{
+  width:100%;padding:14px 16px;
+  color:var(--text);background:var(--card);
+  border:1px solid var(--line);border-radius:8px;
+  font-size:14px;outline:none
+}
+input:focus,select:focus{border-color:var(--accent)}
+select option{background:var(--card)}
+.category{margin:35px 0}
+.category-heading{
+  display:flex;justify-content:space-between;
+  align-items:center;gap:12px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:12px;margin-bottom:16px
+}
+.category-heading h2{font-size:21px;margin:0}
+.count{color:var(--muted);font-size:12px}
+.course-list{display:grid;gap:12px}
+details.course{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:10px;overflow:hidden;
+  transition:border-color .2s
+}
+details.course[open]{border-color:var(--accent)}
+summary{
+  list-style:none;cursor:pointer;padding:19px 21px;
+  display:flex;justify-content:space-between;
+  align-items:center;gap:15px
+}
+summary::-webkit-details-marker{display:none}
+.course-name{font-size:16px;font-weight:bold}
+.course-code{color:var(--muted);font-size:11px;display:block}
+.arrow{color:var(--accent);font-size:20px;transition:.2s}
+details[open] .arrow{transform:rotate(180deg)}
+.course-content{
+  padding:0 21px 23px;
+  border-top:1px solid var(--line)
+}
+.course-content h3{
+  font-size:13px;color:var(--accent);
+  margin:20px 0 5px;letter-spacing:.5px
+}
+.course-content p{color:var(--muted);font-size:14px;margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.tag{
+  background:#193047;color:var(--accent);
+  border-radius:5px;padding:4px 9px;font-size:11px
+}
+.empty{
+  display:none;text-align:center;
+  padding:40px;color:var(--muted);
+  background:var(--card);border-radius:10px
+}
+footer{
+  margin-top:70px;padding:28px;text-align:center;
+  border-top:1px solid var(--line);
+  color:var(--muted);font-size:13px
+}
+@media(max-width:650px){
+  nav{align-items:flex-start;flex-direction:column;padding:15px 0}
+  nav a{margin:0 12px 0 0}
+  .toolbar{grid-template-columns:1fr}
+  summary{padding:16px}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">AMITAI<span>.</span></div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="#catalog">Coursework</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="eyebrow">ACADEMIC KNOWLEDGE & ENGINEERING</div>
+    <h1>Technical <span>Coursework</span></h1>
+    <p class="subtitle">
+      A structured overview of my academic background in
+      Electrical and Electronics Engineering at Lev Academic Center.
+      Explore the courses, the knowledge acquired and their
+      relevance to real-world engineering applications.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <strong id="totalCount">0</strong>
+        <small>Unique courses</small>
+      </div>
+      <div class="stat">
+        <strong>8</strong>
+        <small>Knowledge areas</small>
+      </div>
+      <div class="stat">
+        <strong>B.Sc.</strong>
+        <small>Electrical Engineering</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <div class="toolbar">
+      <input id="search" type="search"
+        placeholder="Search courses, technologies or topics...">
+      <select id="filter">
+        <option value="all">All knowledge areas</option>
+      </select>
+    </div>
+
+    <div id="courseContainer"></div>
+    <div class="empty" id="empty">
+      No courses found. Try a different search.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Amitai Bentov | Technical Coursework
+</footer>
+
+<script>
+const courses = [
+
+{
+name:"Digital Systems Design",code:"130302",
+category:"Digital Design & VLSI",
+study:"Introduction to digital systems and the principles of designing logic-based electronic systems. The course provides a foundation in representing information digitally and understanding the structure and behavior of digital circuits.",
+practice:"This knowledge is relevant to designing digital circuits, understanding hardware functionality and working with digital components used in embedded systems, FPGA development and chip design.",
+tags:["Digital Logic","Digital Systems"]
+},
+
+{
+name:"Advanced Digital Design",code:"130323",
+category:"Digital Design & VLSI",
+study:"Advanced study of digital design principles and the development of more complex digital systems, building on foundational logic design.",
+practice:"Relevant to digital hardware development, designing complex logic structures and understanding the design process used in FPGA and ASIC environments.",
+tags:["Digital Design","RTL","Hardware"]
+},
+
+{
+name:"Advanced Digital Design Lab",code:"130326",
+category:"Digital Design & VLSI",
+study:"Practical laboratory course focused on applying advanced digital design concepts through engineering exercises and implementation work.",
+practice:"Laboratory experience is relevant to translating digital design concepts into working implementations and testing hardware behavior.",
+tags:["Digital Design","Lab","Implementation"]
+},
+
+{
+name:"Electronic Devices",code:"130201",
+category:"Electronics & Circuit Design",
+study:"Study of electronic devices and their electrical behavior, including the role of semiconductor-based components in electronic circuits.",
+practice:"Provides a foundation for understanding component behavior, analyzing electronic circuits and selecting appropriate devices in hardware design.",
+tags:["Semiconductors","Electronic Devices"]
+},
+
+{
+name:"General Electronics",code:"130211",
+category:"Electronics & Circuit Design",
+study:"Introduction to the fundamental principles of electronic circuits, electronic components and their behavior in electrical systems.",
+practice:"Useful for understanding circuit operation, analyzing electronic systems and developing a foundation for analog and digital hardware engineering.",
+tags:["Electronics","Circuits"]
+},
+
+{
+name:"Advanced Analog Electronics",code:"130222",
+category:"Electronics & Circuit Design",
+study:"Advanced study of analog electronic circuits and the principles governing their behavior and performance.",
+practice:"Relevant to analog circuit analysis, electronic hardware development and understanding the analog building blocks used in integrated electronic systems.",
+tags:["Analog Electronics","Circuit Design"]
+},
+
+{
+name:"Advanced Electronics Laboratory",code:"130281",
+category:"Electronics & Circuit Design",
+study:"Hands-on laboratory experience involving advanced electronic systems and practical investigation of circuit behavior.",
+practice:"Develops practical familiarity with electronic measurements, circuit testing and comparing theoretical expectations with real circuit behavior.",
+tags:["Electronics Lab","Measurements","Testing"]
+},
+
+{
+name:"Electrical Engineering I",code:"130505",
+category:"Electronics & Circuit Design",
+study:"Foundational study of electrical engineering principles, electrical quantities and the analysis of electrical systems.",
+practice:"Provides the basis for understanding electrical circuits, analyzing engineering systems and solving practical electrical problems.",
+tags:["Electrical Engineering","Circuits"]
+},
+
+{
+name:"Electrical Engineering II",code:"130521",
+category:"Electronics & Circuit Design",
+study:"Continuation of foundational electrical engineering studies, extending the analysis and understanding of electrical systems.",
+practice:"Supports the analysis and development of more complex electrical circuits and systems.",
+tags:["Electrical Engineering","Circuit Analysis"]
+},
+
+{
+name:"Computer Architecture",code:"130311",
+category:"Computer Architecture & Programming",
+study:"Introduction to computer architecture and the organization of computer systems, including the relationship between hardware components and system operation.",
+practice:"Relevant to understanding processor organization, computer hardware, embedded systems and the interaction between software and hardware.",
+tags:["Computer Architecture","Processors","Hardware"]
+},
+
+{
+name:"Computer Architecture Workshop",code:"130103",
+category:"Computer Architecture & Programming",
+study:"Practical workshop associated with computer architecture, providing applied experience with computer system organization and architecture concepts.",
+practice:"Supports practical understanding of computer hardware structures and the implementation of architecture-related concepts.",
+tags:["Computer Architecture","Workshop"]
+},
+
+{
+name:"Microcomputers Architecture & Programming",code:"130342",
+category:"Computer Architecture & Programming",
+study:"Study of microcomputer architecture and programming, connecting the organization of computing hardware with low-level software execution.",
+practice:"Relevant to embedded systems, microcontroller programming, low-level development and understanding how software interacts with hardware.",
+tags:["Microcomputers","Assembly","Embedded Systems"]
+},
+
+{
+name:"Introduction to Computer Science",code:"150025",
+category:"Computer Architecture & Programming",
+study:"Introduction to computer science and the fundamental concepts of programming and computational problem solving.",
+practice:"Builds the programming and logical thinking foundation required for engineering software, automation and hardware-related development.",
+tags:["Programming","Algorithms"]
+},
+
+{
+name:"Advanced Programming for Engineers",code:"150023",
+category:"Computer Architecture & Programming",
+study:"Programming concepts and techniques applied to engineering problems, with an emphasis on developing computational solutions.",
+practice:"Useful for engineering automation, technical software, data processing and implementing algorithms for engineering applications.",
+tags:["Programming","Engineering Software"]
+},
+
+{
+name:"Introduction to Computers",code:"150000",
+category:"Computer Architecture & Programming",
+study:"Introductory course covering computer fundamentals and basic computer literacy.",
+practice:"Provides foundational familiarity with computer systems and digital working environments.",
+tags:["Computer Fundamentals"]
+},
+
+{
+name:"Fundamentals of Communications",code:"130557",
+category:"Communication & RF",
+study:"Study of fundamental communication engineering principles and the concepts involved in transmitting and receiving information.",
+practice:"Relevant to communication system development, understanding signal transmission and analyzing the basic components of communication links.",
+tags:["Communications","Signals"]
+},
+
+{
+name:"Radio Wave Propagation and Antennas",code:"130831",
+category:"Communication & RF",
+study:"Study of radio wave propagation and antenna principles, focusing on the behavior of electromagnetic waves and their use in wireless communication.",
+practice:"Relevant to RF engineering, antenna systems, wireless communication links and evaluating electromagnetic propagation.",
+tags:["RF","Antennas","Wireless"]
+},
+
+{
+name:"Analog & Digital Communication Laboratory",code:"130661",
+category:"Communication & RF",
+study:"Practical laboratory course associated with analog and digital communication systems and their experimental investigation.",
+practice:"Provides practical context for examining communication signals, system behavior and the relationship between communication theory and hardware implementations.",
+tags:["Communications Lab","Analog","Digital"]
+},
+
+{
+name:"Signals and Systems for Electronics",code:"130605",
+category:"Signal Processing",
+study:"Study of signals and systems and the mathematical methods used to describe and analyze system behavior.",
+practice:"Provides a foundation for signal analysis, system modeling, filtering and understanding signal behavior in electronic and communication systems.",
+tags:["Signals","Systems","Mathematics"]
+},
+
+{
+name:"Digital Signal Processing",code:"130651",
+category:"Signal Processing",
+study:"Study of digital methods for representing, analyzing and processing signals.",
+practice:"Relevant to digital filters, audio and sensor processing, communications, signal analysis and implementation of signal-processing algorithms.",
+tags:["DSP","Digital Filters","Signal Analysis"]
+},
+
+{
+name:"Random Signals & Noise",code:"130681",
+category:"Signal Processing",
+study:"Study of random signals and noise and the methods used to describe and analyze their statistical behavior.",
+practice:"Useful for understanding noise in electronic and communication systems, evaluating signal quality and analyzing systems under uncertainty.",
+tags:["Noise","Probability","Signal Analysis"]
+},
+
+{
+name:"Digital Image Processing",code:"130371",
+category:"Signal Processing",
+study:"Study of digital image representation and processing methods, including computational approaches to analyzing and modifying images.",
+practice:"Relevant to computer vision, image enhancement, image analysis and processing visual information in engineering applications.",
+tags:["Image Processing","MATLAB","Computer Vision"]
+},
+
+{
+name:"Electronic Measurements II",code:"130111",
+category:"Measurements & Laboratories",
+study:"Advanced study of electronic measurement methods and the principles involved in measuring electrical and electronic quantities.",
+practice:"Relevant to laboratory testing, instrument-based measurements, signal characterization and verification of electronic circuits.",
+tags:["Measurements","Instrumentation"]
+},
+
+{
+name:"Laboratory in Electronics and Electricity",code:"130265",
+category:"Measurements & Laboratories",
+study:"Practical laboratory work involving electrical and electronic systems, measurements and experimental investigation.",
+practice:"Develops experience with laboratory equipment, testing procedures, circuit measurements and practical electrical engineering.",
+tags:["Electronics Lab","Electrical Measurements"]
+},
+
+{
+name:"Signals and Systems Laboratory",code:"130606",
+category:"Measurements & Laboratories",
+study:"Laboratory course focused on practical investigation and experimental analysis of signals and systems.",
+practice:"Connects theoretical signal and system concepts with experimental measurements, waveform analysis and system behavior.",
+tags:["Signal Lab","Measurements"]
+},
+
+{
+name:"Linear Systems & Control",code:"130701",
+category:"Control Systems & Energy",
+study:"Study of linear systems and control principles, focusing on mathematical descriptions and the behavior of dynamic systems.",
+practice:"Relevant to feedback systems, control engineering, system modeling and analysis of dynamic electrical and electronic systems.",
+tags:["Control Systems","System Modeling"]
+},
+
+{
+name:"Energy Conversion",code:"130541",
+category:"Control Systems & Energy",
+study:"Study of energy conversion principles and the engineering systems used to convert energy between different forms.",
+practice:"Relevant to electrical energy systems, power conversion and understanding the operation of energy-related equipment.",
+tags:["Energy","Electrical Systems"]
+},
+
+{
+name:"Solar Energy Systems Design",code:"130573",
+category:"Control Systems & Energy",
+study:"Study of solar energy systems and the engineering considerations involved in their design.",
+practice:"Relevant to renewable energy engineering, photovoltaic system planning and understanding solar power system components.",
+tags:["Solar Energy","Renewable Energy"]
+},
+
+{
+name:"Supply Systems 1",code:"130571",
+category:"Control Systems & Energy",
+study:"Course in electrical supply systems and the principles involved in supplying electrical energy.",
+practice:"Relevant to understanding electrical supply infrastructure and the engineering context of electrical distribution systems.",
+tags:["Power Systems","Electrical Supply"]
+},
+
+{
+name:"The Electricity Code and its Regulations",code:"130553",
+category:"Control Systems & Energy",
+study:"Study of electrical regulations and the requirements of the electricity code.",
+practice:"Relevant to understanding regulatory requirements and the standards that apply to electrical installations and engineering work.",
+tags:["Electrical Regulations","Standards"]
+},
+
+{
+name:"Linear Algebra I",code:"120201",
+category:"Mathematics & Engineering Foundations",
+study:"Study of linear algebraic structures and mathematical methods used to solve systems of linear equations.",
+practice:"Provides mathematical tools for engineering calculations, system modeling and computational methods.",
+tags:["Linear Algebra","Mathematics"]
+},
+
+{
+name:"Linear Algebra II",code:"120221",
+category:"Mathematics & Engineering Foundations",
+study:"Continuation of linear algebra, extending the mathematical foundation for working with linear structures and transformations.",
+practice:"Relevant to advanced engineering mathematics, signal analysis, system modeling and numerical computation.",
+tags:["Linear Algebra","Mathematics"]
+},
+
+{
+name:"Infinitesimal Calculus I",code:"120131",
+category:"Mathematics & Engineering Foundations",
+study:"Foundational calculus course covering mathematical methods for studying continuous change and functions.",
+practice:"Provides tools for analyzing electrical quantities, rates of change and continuous physical systems.",
+tags:["Calculus","Mathematics"]
+},
+
+{
+name:"Calculus II for Engineers",code:"120132",
+category:"Mathematics & Engineering Foundations",
+study:"Continuation of calculus for engineering students, developing mathematical methods for more advanced engineering problems.",
+practice:"Relevant to mathematical modeling, engineering analysis and solving problems involving continuous systems.",
+tags:["Calculus","Engineering Mathematics"]
+},
+
+{
+name:"Differential Equations",code:"120501",
+category:"Mathematics & Engineering Foundations",
+study:"Study of differential equations and mathematical methods for describing systems that change over time.",
+practice:"Used in modeling dynamic electrical circuits, physical systems, control systems and other engineering processes.",
+tags:["Differential Equations","System Modeling"]
+},
+
+{
+name:"Complex Variables",code:"120511",
+category:"Mathematics & Engineering Foundations",
+study:"Study of complex-valued functions and mathematical methods involving complex numbers.",
+practice:"Provides mathematical tools used in electrical engineering, frequency-domain analysis and the representation of electrical and physical systems.",
+tags:["Complex Numbers","Mathematics"]
+},
+
+{
+name:"Probability",code:"120701",
+category:"Mathematics & Engineering Foundations",
+study:"Study of probability concepts and mathematical methods for analyzing uncertain events.",
+practice:"Relevant to communication systems, random signals, noise analysis and engineering decisions under uncertainty.",
+tags:["Probability","Statistics"]
+},
+
+{
+name:"Statistics for Engineers",code:"120711",
+category:"Mathematics & Engineering Foundations",
+study:"Introduction to statistical methods and their use in engineering problems and data analysis.",
+practice:"Useful for interpreting measurement data, analyzing experimental results and evaluating engineering performance.",
+tags:["Statistics","Data Analysis"]
+},
+
+{
+name:"Physics I - Mechanics",code:"141010",
+category:"Physics & Electromagnetics",
+study:"Study of classical mechanics and the fundamental principles describing motion, forces and physical systems.",
+practice:"Builds the physical foundation required to understand mechanical behavior in engineering systems.",
+tags:["Mechanics","Physics"]
+},
+
+{
+name:"Physics II",code:"141034",
+category:"Physics & Electromagnetics",
+study:"Continuation of foundational physics studies and the physical principles relevant to engineering.",
+practice:"Provides a foundation for understanding physical phenomena that underpin electrical and electronics engineering.",
+tags:["Physics","Engineering"]
+},
+
+{
+name:"General Physics III (Modern Physics)",code:"141040",
+category:"Physics & Electromagnetics",
+study:"Introduction to modern physics and the physical concepts beyond classical mechanics.",
+practice:"Provides scientific context for understanding modern physical phenomena and the foundations of electronic technologies.",
+tags:["Modern Physics","Physics"]
+},
+
+{
+name:"Electromagnetic Fields",code:"130801",
+category:"Physics & Electromagnetics",
+study:"Study of electromagnetic fields and the physical principles describing electric and magnetic field behavior.",
+practice:"Essential background for understanding electromagnetic interactions, wave propagation, antennas and electromagnetic engineering systems.",
+tags:["Electromagnetics","Fields"]
+},
+
+{
+name:"Project in Electronics I",code:"130901",
+category:"Engineering Projects",
+study:"Academic project course in electronics, providing an opportunity to apply engineering knowledge in a project-oriented setting.",
+practice:"Relevant to developing engineering project workflows, integrating electronic concepts and presenting technical work.",
+tags:["Electronics Project","Engineering"]
+},
+
+{
+name:"Final Project in Electronics II",code:"130902",
+category:"Engineering Projects",
+study:"Final electronics project course, representing an opportunity to integrate knowledge acquired throughout the degree into a substantial engineering project.",
+practice:"Relevant to end-to-end engineering development, technical problem solving, system integration, testing and technical documentation.",
+tags:["Final Project","Electronics","System Integration"]
+}
+
+];
+
+const categories = [...new Set(courses.map(c => c.category))];
+const container = document.getElementById("courseContainer");
+const search = document.getElementById("search");
+const filter = document.getElementById("filter");
+const empty = document.getElementById("empty");
+
+document.getElementById("totalCount").textContent = courses.length;
+
+categories.forEach(category => {
+  const option = document.createElement("option");
+  option.value = category;
+  option.textContent = category;
+  filter.appendChild(option);
+});
+
+function render() {
+  const query = search.value.toLowerCase().trim();
+  const selected = filter.value;
+
+  container.innerHTML = "";
+
+  const filtered = courses.filter(course => {
+    const text = [
+      course.name,
+      course.code,
+      course.category,
+      course.study,
+      course.practice,
+      ...course.tags
+    ].join(" ").toLowerCase();
+
+    return text.includes(query) &&
+      (selected === "all" || course.category === selected);
+  });
+
+  empty.style.display = filtered.length ? "none" : "block";
+
+  categories.forEach(category => {
+    const items = filtered.filter(c => c.category === category);
+    if (!items.length) return;
+
+    const section = document.createElement("section");
+    section.className = "category";
+
+    const heading = document.createElement("div");
+    heading.className = "category-heading";
+
+    const title = document.createElement("h2");
+    title.textContent = category;
+
+    const count = document.createElement("span");
+    count.className = "count";
+    count.textContent = items.length + " courses";
+
+    heading.append(title, count);
+
+    const list = document.createElement("div");
+    list.className = "course-list";
+
+    items.forEach(course => {
+      const details = document.createElement("details");
+      details.className = "course";
+
+      const summary = document.createElement("summary");
+
+      const name = document.createElement("div");
+      name.className = "course-name";
+      name.textContent = course.name;
+
+      const code = document.createElement("span");
+      code.className = "course-code";
+      code.textContent = "Course code: " + course.code;
+
+      name.appendChild(code);
+
+      const arrow = document.createElement("span");
+      arrow.className = "arrow";
+      arrow.textContent = "⌄";
+
+      summary.append(name, arrow);
+
+      const content = document.createElement("div");
+      content.className = "course-content";
+
+      const studyTitle = document.createElement("h3");
+      studyTitle.textContent = "WHAT I STUDIED";
+
+      const study = document.createElement("p");
+      study.textContent = course.study;
+
+      const practiceTitle = document.createElement("h3");
+      practiceTitle.textContent = "PRACTICAL ENGINEERING APPLICATIONS";
+
+      const practice = document.createElement("p");
+      practice.textContent = course.practice;
+
+      const tags = document.createElement("div");
+      tags.className = "tags";
+
+      course.tags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        tags.appendChild(span);
+      });
+
+      content.append(
+        studyTitle, study,
+        practiceTitle, practice,
+        tags
+      );
+
+      details.append(summary, content);
+      list.appendChild(details);
+    });
+
+    section.append(heading, list);
+    container.appendChild(section);
+  });
+}
+
+search.addEventListener("input", render);
+filter.addEventListener("change", render);
+
+render();
+</script>
+</body>
+</html>
